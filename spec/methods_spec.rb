@@ -9,6 +9,11 @@ describe '#greet_programmer' do
   
 end
 
+def greet_programmer
+  puts "Hello, programmer!"
+end
+greet_programmer
+
 describe '#greet' do
 
   it 'outputs a string "Hello, Naureen!" when called with "Naureen"' do
@@ -20,6 +25,11 @@ describe '#greet' do
   end
 
 end
+
+def greet (name = 'Naureen')
+  puts "Hello, #{name}!"
+end
+greet
 
 describe '#greet_with_default' do
 
@@ -33,6 +43,13 @@ describe '#greet_with_default' do
 
 end
 
+def greet_with_default(name1 = "Naureen", name2 = "programmer")
+  puts "Hello, #{name1}!"
+  puts "Hello, #{name2}!"
+end
+greet_with_default
+
+
 describe '#add' do
 
   it 'returns the sum of two numbers' do
@@ -40,6 +57,12 @@ describe '#add' do
   end
 
 end
+
+def add(num1, num2)
+  return num1 + num2
+end
+add(1,2)
+
 
 describe '#halve' do
   
@@ -52,3 +75,12 @@ describe '#halve' do
   end
 
 end
+
+def halve (number)
+  if !number.is_a?(Numeric)
+    return nil
+  end
+  return number /2
+end
+halve ('2')
+halve(4)
